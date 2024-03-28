@@ -1,0 +1,29 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - requirement-publish:
+            contract-id: SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard
+            remap-sender: STJ3BSDKGMMQF6DJK80XRPAMYHPTS1Z0QEQZ8AT1
+            remap-principals:
+              SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE: STJ3BSDKGMMQF6DJK80XRPAMYHPTS1Z0QEQZ8AT1
+            cost: 8400
+            path: "./.cache/requirements/SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.clar"
+            clarity-version: 1
+      epoch: "2.0"
+    - id: 1
+      transactions:
+        - contract-publish:
+            contract-name: bootcamp-token
+            expected-sender: STJ3BSDKGMMQF6DJK80XRPAMYHPTS1Z0QEQZ8AT1
+            cost: 96962231
+            path: contracts/bootcamp-token.clar
+            anchor-block-only: true
+            clarity-version: 2
+      epoch: "2.4"
