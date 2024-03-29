@@ -13,3 +13,12 @@ Esto incluye:
 - Partido ganado da 3 puntos
 - Partido empatado da 1 punto
 - Partido perdido da 0 puntos
+
+## Variables
+- Equipos
+- Juegos
+
+## Funciones
+- Inicializar juego
+- Ejecutar enfrentamiento
+- Actualizar tabla puntos

@@ -8,6 +8,11 @@
   (default-to u0 (map-get? counters who))
 )
 
+;; Function to count up for ny wallet ST
+(define-public (update-counter (who principal))
+  (ok (map-set counters who (+ (get-count who) u1)))
+)
+
 ;; Function to increment the count for the caller
 (define-public (count-up)
   (ok (map-set counters tx-sender (+ (get-count tx-sender) u1)))

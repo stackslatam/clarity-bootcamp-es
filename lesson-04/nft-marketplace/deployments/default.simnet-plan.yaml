@@ -50,12 +50,7 @@ plan:
     - id: 0
       transactions:
         - emulated-contract-publish:
-            contract-name: counter
-            emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
-            path: contracts/counter.clar
-            clarity-version: 2
-        - emulated-contract-publish:
-            contract-name: football-fixture
+            contract-name: football
             emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
             path: contracts/football-fixture.clar
             clarity-version: 2

@@ -39,7 +39,19 @@
   }
 )
 
-;; map<uint, uint> = map<id, points>
+;; ;; Definir a map for match map<orden, tupla {playe1, player2, resultado}>
+;; (define-map match
+;;   uint,
+;;   {
+;;     player1: (string-ascii 10),
+;;     player2: (string-ascii 10),
+;;     result: uint,
+;;     point1: uint,
+;;     point2: uint,
+;;   }
+;; )
+
+;; map<uint, uint> = map<id, points> tabla de puntos
 (define-map points
     uint
     uint
@@ -49,8 +61,8 @@
 ;;
 (define-public (init-football-play)
     (begin 
-        (map-set teams peru { name: "Peru", captain: "Lapadula"})
-        (map-set teams argentina { name: "Argentina", captain: "x"})
+        (map-set teams peru { name: "Peru", captain: "Paolo"})
+        (map-set teams argentina { name: "Argentina", captain: "Messi"})
         (map-set teams chile { name: "Chile", captain: "y"})
         (map-set teams colombia { name: "Colombia", captain: "z"})
         (ok "Play started")
@@ -59,6 +71,7 @@
 
 (define-data-var winner uint u0)
 
+;; ejecuta un partido o encuentro futbol
 (define-public (set-football-match (player1 uint) (player2 uint))
     (begin
        ;; calculate the winner
