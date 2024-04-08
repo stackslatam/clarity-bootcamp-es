@@ -9,7 +9,7 @@ mnemon = Mnemonic('english')
 mnemonic_words = mnemon.generate(256) # Generate a 256-bit mnemonic
 
 # Generate the seed from the mnemonic
-seed = mnemon.to_seed(mnemonic_words)
+seed = mnemon.to_seed('people rack inspire sponsor exercise fine balcony thunder oak marble unlock ensure')
 
 # Generate the BIP32 root key from the seed
 root_key = bip32utils.BIP32Key.fromEntropy(seed)
