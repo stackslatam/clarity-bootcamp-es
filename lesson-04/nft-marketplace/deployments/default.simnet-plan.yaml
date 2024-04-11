@@ -50,8 +50,8 @@ plan:
     - id: 0
       transactions:
         - emulated-contract-publish:
-            contract-name: football
+            contract-name: hello-world-24
             emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
-            path: contracts/football-fixture.clar
+            path: contracts/hello-world-24.clar
             clarity-version: 2
       epoch: "2.4"
